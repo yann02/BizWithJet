@@ -3,6 +3,7 @@ package com.wyy.bizwithjet
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.viewbinding.BuildConfig
 import com.wyy.bizwithjet.databinding.ActivityMainBinding
 import com.wyy.bizwithjet.utils.DisplayUtil
 

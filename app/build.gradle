@@ -3,6 +3,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('wyydev.jks')
+            storePassword 'wyy123456'
+            keyAlias = 'yann'
+            keyPassword 'wyy123456'
+        }
+    }
     compileSdkVersion 30
     buildToolsVersion "30.0.1"
 
@@ -18,8 +26,10 @@ android {
 
     buildTypes {
         release {
+            // 是否使用混淆
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     viewBinding {
