@@ -18,6 +18,11 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url 'http://47.106.198.180:8191/nexus/content/repositories/thirdparty' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+        maven { url "https://jitpack.io" }
+        maven { url 'https://csspeechstorage.blob.core.windows.net/maven/'}
         google()
         jcenter()
         

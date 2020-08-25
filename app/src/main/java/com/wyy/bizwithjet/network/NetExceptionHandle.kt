@@ -2,8 +2,8 @@ package com.wyy.bizwithjet.network
 
 import androidx.lifecycle.MutableLiveData
 import com.google.gson.JsonParseException
-import com.wjx.android.weather.common.state.State
-import com.wjx.android.weather.common.state.StateType
+import com.wyy.bizwithjet.common.state.State
+import com.wyy.bizwithjet.common.state.StateType
 import org.apache.http.conn.ConnectTimeoutException
 import retrofit2.HttpException
 import java.net.ConnectException

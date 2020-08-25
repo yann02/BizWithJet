@@ -1,10 +1,12 @@
 package com.wyy.bizwithjet
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.viewbinding.BuildConfig
 import com.wyy.bizwithjet.databinding.ActivityMainBinding
+import com.wyy.bizwithjet.modules.main.view.MenuDataActivity
 import com.wyy.bizwithjet.utils.DisplayUtil
 
 class MainActivity : AppCompatActivity() {
@@ -28,8 +30,8 @@ class MainActivity : AppCompatActivity() {
         mWindowHeightDp = (2160.0 / resources.displayMetrics.density + 0.5).toInt()
         mWidthPx = windowManager.defaultDisplay.width
         mHeightPx = windowManager.defaultDisplay.height
-        binding.tvContent.text =
-            "屏幕宽度是:$mWindowWidthDp dp，高度是：$mWindowHeightDp dp。$mWidthPx px, $mHeightPx px"
+        binding.tvContent.text = "屏幕宽度是:$mWindowWidthDp dp，高度是：$mWindowHeightDp dp。$mWidthPx px, $mHeightPx px"
+        startActivity(Intent(this, MenuDataActivity::class.java))
     }
 
     private fun setDhlAndZtl() {

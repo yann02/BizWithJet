@@ -1,5 +1,6 @@
 package com.wyy.bizwithjet.network
 
+import com.wyy.bizwithjet.BuildConfig
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -19,7 +20,7 @@ class RetrofitFactory private constructor() {
 
     init {
         retrofit = Retrofit.Builder()
-            .baseUrl("abc")
+            .baseUrl(BuildConfig.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
