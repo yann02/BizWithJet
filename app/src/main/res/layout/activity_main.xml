@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/tv_content"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="864dp"
         android:text="Hello World!"
         android:background="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toBottomOf="parent"
