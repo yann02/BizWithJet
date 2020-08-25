@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        DisplayUtil.setCustomDensityByHeight(this, application, 400)
         setDhlAndZtl()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -23,7 +24,8 @@ class MainActivity : AppCompatActivity() {
         mWindowHeightDp = (800.0 / resources.displayMetrics.density + 0.5).toInt()
         mWidthPx = windowManager.defaultDisplay.width
         mHeightPx = windowManager.defaultDisplay.height
-        binding.tvContent.text = "屏幕宽度是:$mWindowWidthDp dp，高度是：$mWindowHeightDp dp。$mWidthPx px, $mHeightPx px"
+        binding.tvContent.text =
+            "屏幕宽度是:$mWindowWidthDp dp，高度是：$mWindowHeightDp dp。$mWidthPx px, $mHeightPx px"
     }
 
     private fun setDhlAndZtl() {
